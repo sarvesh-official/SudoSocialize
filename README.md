@@ -12,7 +12,7 @@ SudoSocialize is a powerful yet user-friendly platform that brings together tech
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/SudoSocialize.git
+   git clone https://github.com/sarvesh-officialSudoSocialize.git
    ```
 
 2. **Navigate to the Project Directory:**
@@ -39,5 +39,5 @@ SudoSocialize is a powerful yet user-friendly platform that brings together tech
 
 Let's elevate the socializing experience with the command line prowess of SudoSocialize! 🚀
 
----
+
 
