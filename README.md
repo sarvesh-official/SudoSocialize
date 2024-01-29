@@ -11,16 +11,19 @@ SudoSocialize is a powerful yet user-friendly platform that brings together tech
 ### How to Get Started:
 
 1. **Clone the Repository:**
+
    ```bash
    git clone https://github.com/sarvesh-officialSudoSocialize.git
    ```
 
 2. **Navigate to the Project Directory:**
+
    ```bash
    cd SudoSocialize
    ```
 
 3. **Run the Application:**
+
    ```bash
    npm install
    npm start
@@ -38,6 +41,3 @@ SudoSocialize is a powerful yet user-friendly platform that brings together tech
 - Submit a pull request.
 
 Let's elevate the socializing experience with the command line prowess of SudoSocialize! 🚀
-
-
-
