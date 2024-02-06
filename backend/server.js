@@ -1,37 +1,35 @@
-import express from "express"
-import dotenv from "dotenv"
-import cookieParser from "cookie-parser"
+import path from "path";
+import express from "express";
+import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
 
-import authRoutes from "./routes/authRoute.js"
-import userRoutes from "./routes/userRoute.js"
-import messageRoutes from "./routes/messageRoute.js"
-import connectToMongoDB from "./db/connectToMongoDb.js"
-import { app } from "./socket/socket.js"
-import path from "path"
+import authRoutes from "./routes/auth.routes.js";
+import messageRoutes from "./routes/message.routes.js";
+import userRoutes from "./routes/user.routes.js";
+
+import connectToMongoDB from "./db/connectToMongoDB.js";
+import { app, server } from "./socket/socket.js";
+
+const PORT = process.env.PORT || 5000;
+
+const __dirname = path.resolve();
+
 dotenv.config();
 
-// const app = express()
-const PORT = process.env.PORT || 5000
+app.use(express.json()); // to parse the incoming requests with JSON payloads (from req.body)
+app.use(cookieParser());
 
-const __dirname = path.resolve()
-app.use(express.static(path.join(__dirname,"/frontend/dist")))
+app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);
+app.use("/api/users", userRoutes);
 
-app.get("*",(req,res)=>{
-    res.send(path.join(__dirname,"frontend","dist","index.html"))
-})
+app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-app.use(express.json()) //? to parse the incoming requests with JSON payloads (from req.body)
-app.use(cookieParser()) //^ To get the saved cookies
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+});
 
-app.use("/api/auth",authRoutes)
-app.use("/api/messages",messageRoutes)
-app.use("/api/users",userRoutes)
-
-app.get("/",(req,res)=>{
-    res.send("Hello World")
-})
-
-
-app.listen(PORT,()=> {
-    connectToMongoDB()
-    console.log("Server is running in",PORT)})
+server.listen(PORT, () => {
+	connectToMongoDB();
+	console.log(`Server Running on port ${PORT}`);
+});
