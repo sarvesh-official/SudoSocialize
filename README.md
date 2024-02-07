@@ -1,43 +1,37 @@
-# SudoSocialize 👨🏻‍💻
+# MERN Stack Project: Build and Deploy a Real Time Chat App | JWT, Socket.io
 
-SudoSocialize is a powerful yet user-friendly platform that brings together tech enthusiasts in a unique and command-driven environment. With the strength of "sudo" at its core, SudoSocialize empowers users to connect, collaborate, and socialize in a space where technology meets community.
+![Demo App](https://i.ibb.co/gFSMzKN/1.png)
 
-### Key Features:
+[Video Tutorial on Youtube](https://youtu.be/HwCqsOis894)
 
-- **Ctrl-Alt-Connect:** Seamlessly connect with fellow techies using powerful keyboard-inspired shortcuts.
-- **Command-Driven Socializing:** Leverage the command line spirit to engage in meaningful conversations and collaborative efforts.
-- **Hub of Connectivity:** Experience a hub that goes beyond conventional social platforms, providing a space where tech-savvy minds unite.
+Some Features:
 
-### How to Get Started:
+-   🌟 Tech stack: MERN + Socket.io + TailwindCSS + Daisy UI
+-   🎃 Authentication && Authorization with JWT
+-   👾 Real-time messaging with Socket.io
+-   🚀 Online user status (Socket.io and React Context)
+-   👌 Global state management with Zustand
+-   🐞 Error handling both on the server and on the client
+-   ⭐ At the end Deployment like a pro for FREE!
+-   ⏳ And much more!
 
-1. **Clone the Repository:**
+### Setup .env file
 
-   ```bash
-   git clone https://github.com/sarvesh-officialSudoSocialize.git
-   ```
+```js
+PORT=...
+MONGO_DB_URI=...
+JWT_SECRET=...
+NODE_ENV=...
+```
 
-2. **Navigate to the Project Directory:**
+### Build the app
 
-   ```bash
-   cd SudoSocialize
-   ```
+```shell
+npm run build
+```
 
-3. **Run the Application:**
+### Start the app
 
-   ```bash
-   npm install
-   npm start
-   ```
-
-4. **Join the SudoSocialize Community:**
-   Visit [our website](https://www.sudosocialize.com) to connect with like-minded individuals and explore the power of tech-driven socializing.
-
-### Contribute:
-
-- Fork the repository.
-- Create a new branch: `git checkout -b feature/new-feature`.
-- Commit your changes: `git commit -m 'Add new feature'`.
-- Push to the branch: `git push origin feature/new-feature`.
-- Submit a pull request.
-
-Let's elevate the socializing experience with the command line prowess of SudoSocialize! 🚀
+```shell
+npm start
+```
