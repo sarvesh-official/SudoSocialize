@@ -1,8 +1,8 @@
-# MERN Stack Project: Build and Deploy a Real Time Chat App | JWT, Socket.io
+# Sudo Socialize
+## MERN Stack Project: Build and Deploy a Real Time Chat App | JWT, Socket.io
 
 ![Demo App](https://i.ibb.co/gFSMzKN/1.png)
 
-[Video Tutorial on Youtube](https://youtu.be/HwCqsOis894)
 
 Some Features:
 
