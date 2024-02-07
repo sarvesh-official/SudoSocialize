@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
-import useGetMessages from "../../../Hooks/useGetMessages.js"
-import MessageSkeleton from "../../skeletons/MessageSkeleton.jsx"
-import Message from "./Message"
-import useListenMessages from "../../../Hooks/useListenMessages.js";
+import useGetMessages from "../../hooks/useGetMessages";
+import MessageSkeleton from "../skeletons/MessageSkeleton";
+import Message from "./Message";
+import useListenMessages from "../../hooks/useListenMessages";
 
 const Messages = () => {
 	const { messages, loading } = useGetMessages();
@@ -33,3 +33,26 @@ const Messages = () => {
 	);
 };
 export default Messages;
+
+// STARTER CODE SNIPPET
+// import Message from "./Message";
+
+// const Messages = () => {
+// 	return (
+// 		<div className='px-4 flex-1 overflow-auto'>
+// 			<Message />
+// 			<Message />
+// 			<Message />
+// 			<Message />
+// 			<Message />
+// 			<Message />
+// 			<Message />
+// 			<Message />
+// 			<Message />
+// 			<Message />
+// 			<Message />
+// 			<Message />
+// 		</div>
+// 	);
+// };
+// export default Messages;
