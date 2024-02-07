@@ -3,9 +3,9 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 
-import authRoutes from "./routes/auth.routes.js";
-import messageRoutes from "./routes/message.routes.js";
-import userRoutes from "./routes/user.routes.js";
+import messageRoutes from "./routes/messageRoute.js";
+import authRoutes from "./routes/authRoute.js"
+import userRoutes from "./routes/userRoute.js";
 
 import connectToMongoDB from "./db/connectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
